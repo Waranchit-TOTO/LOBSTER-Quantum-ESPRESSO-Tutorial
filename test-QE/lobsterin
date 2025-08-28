@@ -1,0 +1,6 @@
+cohpstartenergy -15
+cohpendenergy 5
+basisSet Bunge
+includeOrbitals s p d
+
+cohpgenerator from 1.0 to 2.0

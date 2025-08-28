@@ -1,0 +1,51 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.00d-04
+  forc_conv_thr =   1.00d-03
+  outdir = './scf-NO'
+  prefix = 'scf-NO'
+  pseudo_dir = 'Path/to/your/PPs'
+  tprnfor = .true.
+!  verbosity = 'high'
+  wf_collect = .true. 
+/
+&SYSTEM
+  a    =  15
+  b    =  15
+  c    =  15
+  ibrav = 8
+  nat = 2
+  ecutrho =   600
+  ecutwfc =   60
+  nosym = .true.
+  nspin = 2
+  ntyp = 2
+  degauss =   1.000000000d-02
+  occupations = 'smearing'
+  smearing = 'gaussian' 
+  starting_magnetization(1) =   0.2
+  starting_magnetization(2) =   0.2
+  vdw_corr = 'dft-d3'
+  nosym = .true.
+  noinv = .true.
+/
+&ELECTRONS
+  conv_thr =   1.00d-06
+  electron_maxstep = 300
+  mixing_beta =   0.4
+/
+&IONS
+/
+&CELL
+   cell_dofree      = 'ibrav'
+/
+ATOMIC_SPECIES
+N      14.00674 N.pbe-n-kjpaw_psl.1.0.0.UPF
+O1      15.9994 O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+K_POINTS automatic
+1 1 1 0 0 0   
+
+ATOMIC_POSITIONS {angstrom}
+N                7.5000386206        7.4999616348        6.9166766385
+O1               7.4999613794        7.5000383652        8.0833233615
